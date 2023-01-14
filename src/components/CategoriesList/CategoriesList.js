@@ -1,4 +1,5 @@
 import React from "react";
+import "./CategoriesList.css";
 
 // images link
 // 1. Top offers - https://rukminim1.flixcart.com/fk-p-flap/128/128/image/47e5c31ef7dcce1e.png?q=100
@@ -12,8 +13,35 @@ import React from "react";
 
 function CategoriesList() {
   return (
-    <div>
-      <p>I am a category list</p>
+    <div className="categories_list">
+      <div className="single_category">
+        <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/47e5c31ef7dcce1e.png?q=100" />
+        <p>Top Offers</p>
+      </div>
+      <div className="single_category">
+        <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/47e5c31ef7dcce1e.png?q=100" />
+        <p>Top Offers</p>
+      </div>
+      <div className="single_category">
+        <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/47e5c31ef7dcce1e.png?q=100" />
+        <p>Top Offers</p>
+      </div>
+      <div className="single_category">
+        <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/47e5c31ef7dcce1e.png?q=100" />
+        <p>Top Offers</p>
+      </div>
+      <div className="single_category">
+        <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/47e5c31ef7dcce1e.png?q=100" />
+        <p>Top Offers</p>
+      </div>
+      <div className="single_category">
+        <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/47e5c31ef7dcce1e.png?q=100" />
+        <p>Top Offers</p>
+      </div>
+      <div className="single_category">
+        <img src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/47e5c31ef7dcce1e.png?q=100" />
+        <p>Top Offers</p>
+      </div>
     </div>
   );
 }
