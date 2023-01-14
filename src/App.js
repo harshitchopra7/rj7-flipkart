@@ -13,6 +13,7 @@ function App() {
   return (
     <div className="app">
       <Navbar />
+
       <CategoriesList />
       {/* <Carousel /> */}
     </div>

@@ -1,0 +1,17 @@
+.single_category {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.single_category>img {
+    width: 70px;
+}
+
+.single_category>p {
+    font-size: 14px;
+    font-weight: bold;
+}
