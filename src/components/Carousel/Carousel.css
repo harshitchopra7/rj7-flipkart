@@ -1,4 +1,10 @@
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 .carousel_images {
-    width: 100%;
+    width: 90%;
     height: auto;
 }
