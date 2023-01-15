@@ -4,7 +4,7 @@ import "./Card.css";
 // general component
 // structure
 
-// Destructuring - { image, text  }
+// Destructuring - { image, text }
 
 function Card({ image, text }) {
   return (
