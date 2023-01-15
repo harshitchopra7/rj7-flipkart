@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Carousel.css";
-import Carousels from "./Carousels";
+import CarouselCard from "./CarouselCard";
 
 function Carousel() {
-  const carouselData = [
+  const data = [
     {
       id: 1,
       image: "https://m.media-amazon.com/images/I/81EZPF-FSdL._SX3000_.jpg",
@@ -16,14 +16,42 @@ function Carousel() {
     },
     {
       id: 3,
-      image: "https://m.media-amazon.com/images/I/81KqtuapUzL._SX3000_.jpg",
-      name: "Groceries",
+      image: "https://m.media-amazon.com/images/I/71JylaoMg+L._SX3000_.jpg",
+      name: "Mobile",
     },
   ];
 
+  // let index = 0;
+  const [index, setIndex] = useState(0);
+  const [currentImage, setCurrentImage] = useState(data[0].image);
+
+  function showNextImage() {
+    console.log("28", index);
+    if (index >= 2) return;
+
+    setCurrentImage(data[index + 1].image);
+    setIndex(index + 1);
+  }
+
+  function showPreviousImage() {
+    if (index == 0) return;
+
+    setCurrentImage(data[index - 1].image);
+    setIndex(index - 1);
+  }
+
+  console.log("index", index);
+
   return (
     <div className="carousel">
-      <Carousels carouselData={carouselData} />
+      {/* {carouselData.map((value) => (
+        <CarouselCard image={value.image} />
+      ))} */}
+
+      <img className="carousel_images" src={currentImage} />
+
+      <button onClick={showPreviousImage}>previous image</button>
+      <button onClick={showNextImage}>next image</button>
     </div>
   );
 }
