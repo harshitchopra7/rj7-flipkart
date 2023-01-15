@@ -8,3 +8,7 @@
     width: 90%;
     height: auto;
 }
+
+.carousel_arrow {
+    cursor: pointer;
+}

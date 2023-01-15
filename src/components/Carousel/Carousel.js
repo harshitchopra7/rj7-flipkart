@@ -26,40 +26,42 @@ function Carousel() {
   const [index, setIndex] = useState(0);
   const [currentImage, setCurrentImage] = useState(data[0].image);
 
+  console.log("length of data", data.length);
+  console.log("index", index);
+
   function showNextImage() {
-    if (index >= 2) return;
+    if (index === data.length - 1) {
+      setCurrentImage(data[0].image);
+      setIndex(0);
+      return;
+    }
 
     setCurrentImage(data[index + 1].image);
     setIndex(index + 1);
   }
 
   function showPreviousImage() {
-    if (index == 0) return;
+    if (index == 0) {
+      setCurrentImage(data[data.length - 1].image);
+      setIndex(data.length - 1);
+      return;
+    }
 
     setCurrentImage(data[index - 1].image);
     setIndex(index - 1);
   }
 
-  console.log("index", index);
-
   return (
     <div className="carousel">
-      {/* {carouselData.map((value) => (
-        <CarouselCard image={value.image} />
-      ))} */}
-
-      <div>
+      <div className="carousel_arrow" onClick={showPreviousImage}>
         <ArrowBackIosNewIcon />
       </div>
 
       <img className="carousel_images" src={currentImage} />
 
-      <div>
+      <div className="carousel_arrow" onClick={showNextImage}>
         <ArrowForwardIosIcon />
       </div>
-
-      {/* <button onClick={showPreviousImage}>previous image</button>
-      <button onClick={showNextImage}>next image</button> */}
     </div>
   );
 }
