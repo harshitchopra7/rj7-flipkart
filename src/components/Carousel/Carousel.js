@@ -1,6 +1,6 @@
 import React from "react";
 import "./Carousel.css";
-import CarouselCard from "./CarouselCard";
+import Carousels from "./Carousels";
 
 function Carousel() {
   const carouselData = [
@@ -23,9 +23,7 @@ function Carousel() {
 
   return (
     <div className="carousel">
-      {carouselData.map((value) => (
-        <CarouselCard image={value.image} />
-      ))}
+      <Carousels carouselData={carouselData} />
     </div>
   );
 }
